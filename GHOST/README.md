@@ -7,8 +7,6 @@ This is the Docker project made with Docker Compose based on Red hat Linux-8 ope
 
 ## How to execute:
 1. To download image : "docker pull ghost:latest"
-   
-                     : "docker pull mysql:5.7"
 2. Go to working directory : "cd /GHOST/"
 3. To launch the setup : "docker-compose up"
 4. To stop but not remove the setup : "docker-compose stop"
