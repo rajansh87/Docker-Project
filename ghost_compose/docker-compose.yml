@@ -1,0 +1,35 @@
+version: '3'
+services:
+        dbos:
+                image: mysql:5.7
+                volumes:
+                        - mysql_storage_new:/var/lib/mysql
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: rootpass
+                        MYSQL_USER: ansh
+                        MYSQL_PASSWORD: 123
+                        MYSQL_DATABASE: mydata
+
+
+        ghostos:
+                image: ghost:latest
+                restart: always
+                depends_on:
+                        - dbos
+                ports:    
+                        - 8081:2368
+                environment:
+                        database_client: mysql
+                        database_connection_host: dbos
+                        database_connection_user: ansh
+                        database_connection_password: 123
+                        database_connection_database: mydata
+                volumes:
+                        - ghost_storage_new:/var/lib/ghost
+ 
+
+volumes:
+        mysql_storage_new:
+        ghost_storage_new:
+
