@@ -1,1 +1,17 @@
-Docker is one of the revolutionary technologies based on the containerization technology created by Solomon Hykes officially released on 7th March 2013. It is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and deploy it as one package. By doing so, thanks to the container, the developer can rest assured that the application will run on any other Linux machine regardless of any customized settings that machine might have that could differ from the machine used for writing and testing the code. Docker is designed to benefit both developers and system administrators, making it a part of many DevOps (developers + operations) toolchains. For developers, it means that they can focus on writing code without worrying about the system that it will ultimately be running on. It also allows them to get a head start by using one of thousands of programs already designed to run in a Docker container as a part of their application. For operations staff, Docker gives flexibility and potentially reduces the number of systems needed because of its small footprint and lower overhead.
+Ghost is a free and open source blogging platform written in JavaScript and distributed under the MIT License, designed to simplify the process of online publishing for individual bloggers as well as online publications.
+
+This is the Docker project made with Docker Compose based on Red hat Linux-8 operating system as host. My project uses “Infrastructure as a Code” i.e. “Docker Compose” to launch a full working Ghost setup in one go.
+
+Ghost is an entirely open source application which has been downloaded 2,000,000+ times by developers all over the world. It uses a modern technology stack with sensible components and abstractions. We release code which developers love; The inventors of JavaScript, Android and StackOverflow all use Ghost for their blogs.
+
+
+How to execute:
+1. To download image : "docker pull ghost:latest"
+2. Go to working directory : "cd /GHOST/"
+3. To launch the setup : "docker-compose up"
+4. To stop but not remove the setup : "docker-compose stop"
+5. To again start the setup : "docker-compose start"
+6. To access the .YAML file : Go to "cd/GHOST/"  
+7. To run : "vim docker-compose.yml"
+8. Your Ghost web environment is now successfully created hosted on your base Red Hat system. 
+   Go to IP(Base Red Hat System):8081 to check your Ghost Set up.
