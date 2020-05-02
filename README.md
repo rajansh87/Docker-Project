@@ -3,8 +3,6 @@ These are the projects based on my learning from IIEC RISE 1.0 DOCKER training g
 
 I have completed IIEC DOT 1.0 DOCKER Training under the guidance of Vimal Daga Sir. A Special thanks to Vimal Daga sir and the whole IIEC Rise Community for organizing such a great course with a great motive of #makingindiafutureready. 
 
-About My Project: My project uses “Infrastructure as a Code” i.e. “Docker Compose” to launch a full working Ghost setup in one go. Ghost is a free and open source blogging platform written in JavaScript.
-
 #iiec_connect #iiec_rise #iiec_dot #iiec #vimaldaga #initiative #righteducation #docker    #rhel8 #dockercompose #training #redhat #redhatlinux #virtualization #virtualmachines #containerization #containers #ghost #ghostwriter
 
 ## RISE-ID: RISE 2020.51.8.1
