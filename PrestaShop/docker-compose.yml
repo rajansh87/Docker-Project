@@ -1,0 +1,36 @@
+version: '3'
+services:
+        dbos:
+                image: mysql:5.7
+                volumes:
+                        - mysql_storage_new:/var/lib/mysql
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: rootpass
+                        MYSQL_USER: ansh
+                        MYSQL_PASSWORD: 123
+                        MYSQL_DATABASE: mydb
+
+        prestashop:
+                image: prestashop/prestashop:latest
+                restart : always
+                depends_on:
+                        - dbos
+                ports:
+                        - 8081:80
+                environment:
+                        DB_HOST: dbos
+                        DB_USER: ansh
+                        DB_PASSWD: 123
+                        DB_NAME: mydb
+                        PS_DEMO_MODE: 1
+                        PS_FOLDER_INSTALL: install-dev
+                volumes:
+                        - ps_storage_new:/var/www/html
+
+volumes:
+        ps_storage_new:
+        mysql_storage_new:
+
+      
+
